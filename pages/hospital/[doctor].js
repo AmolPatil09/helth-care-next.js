@@ -114,7 +114,7 @@ export default function doctor() {
   const submitData = () => {
     event.preventDefault()
     console.log(formData);
-    axios.post('http://localhost:5000/Appointment', formData)
+    axios.post('https://helthcaredata.onrender.com/Appointment', formData)
       .then(function (response) {
         setMesseges((pre) => {
           return { ...pre, successMessage: "Appointmet Book Successfull" }
@@ -133,7 +133,7 @@ export default function doctor() {
   return (
     <div className='align-item-center' style={{ height: "550px" }}>
 
-      <div className='bg-white mt-5' style={{ width: "300px", height: "auto", border: "2px solid black", borderRadius: "25px", margin: "auto" }}>
+      <div className='bg-white mt-5' style={{ width: "350px", height: "auto", border: "2px solid black", borderRadius: "25px", margin: "auto" }}>
         <h2 className='text-center bg-black text-white' style={{ borderTopLeftRadius: "25px", borderTopRightRadius: "25px", height: "50px" }} >Book Appointment</h2>
         <form className='container mb-3 mt-3' >
           <div>

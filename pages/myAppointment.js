@@ -4,7 +4,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 export const getStaticProps=async()=>{
-  const res =await fetch("http://localhost:5000/Appointment");
+  const res =await fetch("https://helthcaredata.onrender.com/Appointment");
   const data=await res.json();
   return{
     props:{data}
@@ -20,7 +20,7 @@ export default function myAppointment({data}) {
   })
   const deleteData=(id)=>{
     alert("Do you wan't cancel Appointment")
-    axios.delete(`http://localhost:5000/Appointment/${id}`)
+    axios.delete(`https://helthcaredata.onrender.com/Appointment/${id}`)
       .then(function (response) {
         setMesseges((pre)=>{
        return {...pre,successMessage:"Cancel Appointment Successfully"}

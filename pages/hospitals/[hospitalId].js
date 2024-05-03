@@ -3,7 +3,7 @@ import router from 'next/router';
 
 
 export const getStaticPaths=async()=>{
-    const res =await fetch("http://localhost:5000/Hospitals");
+    const res =await fetch("https://helthcaredata.onrender.com/Hospitals");
     const data=await res.json();
 
     const paths=data.map((c)=>{
@@ -21,7 +21,7 @@ export const getStaticPaths=async()=>{
 
   export const getStaticProps=async(context)=>{
     const id=context.params.hospitalId
-    const res =await fetch(`http://localhost:5000/Hospitals/${id}`);
+    const res =await fetch(`https://helthcaredata.onrender.com/Hospitals/${id}`);
     const data1=await res.json();
     return{
       props:{data1}
@@ -38,7 +38,7 @@ export default function hospitalId({data1}) {
    
    data1.Doctors.map((c)=>{
     return <>
-<div className="card mt-3 mb-3" style={{width:"300px" ,margin:"auto",height:"450px"}}>
+<div className="card mt-3 mb-3" style={{width:"350px" ,margin:"auto",height:"450px"}}>
 <img src={c.dImgPath} className="card-img-top" alt={c.name+" Image"}  style={{height:"200px"}}/>
 <div className="card-body">
   <h5 className="card-title">{c.name}</h5>

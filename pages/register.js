@@ -168,7 +168,7 @@ export default function register() {
    const submitData = (e) => {
       e.preventDefault()
       console.log(formData);
-      axios.post('http://localhost:5000/User', formData)
+      axios.post('https://helthcaredata.onrender.com/User', formData)
          .then(function (response) {
             setMesseges((pre) => {
                return { ...pre, successMessage: "Registration Successfull" }

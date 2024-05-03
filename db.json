@@ -429,16 +429,19 @@
       "userName": "sdfgh@sdsdf.com",
       "password": "sdf12#22",
       "id": 84
+    },
+    {
+      "userName": "amol@gmil.com",
+      "password": "sdfghfdgh",
+      "id": 85
+    },
+    {
+      "userName": "sdfgh@sdsdf.com",
+      "password": "sdf12#22",
+      "id": 86
     }
   ],
   "Appointment": [
-    {
-      "doctorName": "Dr. Amit Thakur",
-      "date": "2023-10-25",
-      "time": "12 Pm to 01 Pm",
-      "petiontName": "Amol Patil",
-      "id": 2
-    },
     {
       "doctorName": "Dr. Neha Kulkrni",
       "date": "2023-11-22",
